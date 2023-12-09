@@ -4,16 +4,18 @@ import './Editor.scss';
 class Editor extends Component {
     constructor(props){
         super(props);
+
+        this.handleChange = this.handleChange.bind(this);
     }
 
-    handleChange(text){
-        this.props.update(text);
+    handleChange(e){
+        this.props.update(e.target.value);
     }
 
     render(){
         return (
         <div className="Editor">
-            <textarea onChange={this.handleUpdate}></textarea>
+            <textarea onChange={this.handleChange}></textarea>
         </div>
         )
     }

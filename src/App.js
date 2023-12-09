@@ -14,21 +14,18 @@ class App extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(e){
+  handleChange(text){
     this.setState({
-      editorText: e.target.value
+      editorText: text
     })
-
-    console.log(this.state.editorText);
   }
-
 
   render(){
     return (
       <div className="App">
-        <textarea onChange={this.handleChange}></textarea>
-        {/* <Editor></Editor>
-        <Preview></Preview> */}
+        <Editor
+          update={this.handleChange}></Editor>
+        <Preview></Preview> */
       </div>
     );
   }
