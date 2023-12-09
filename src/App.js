@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import './App.css';
+import './App.scss';
 import Editor from './Editor/Editor';
 import Preview from './Preview/Preview';
 import { marked } from 'marked';
