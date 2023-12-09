@@ -6,9 +6,15 @@ class Editor extends Component {
         super(props);
     }
 
+    handleChange(text){
+        this.props.update(text);
+    }
+
     render(){
         return (
-        <div className="Editor">Editor</div>
+        <div className="Editor">
+            <textarea onChange={this.handleUpdate}></textarea>
+        </div>
         )
     }
 }
