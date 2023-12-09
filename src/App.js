@@ -2,13 +2,15 @@ import { Component } from 'react';
 import './App.css';
 import Editor from './Editor/Editor';
 import Preview from './Preview/Preview';
+import { marked } from 'marked';
 
 class App extends Component {
   constructor(props){
     super(props);
 
     this.state= {
-      editorText: ''
+      editorText: '',
+      preview: ''
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -16,7 +18,8 @@ class App extends Component {
 
   handleChange(text){
     this.setState({
-      editorText: text
+      editorText: text,
+      preview: marked.parse(text)
     })
   }
 
@@ -25,7 +28,8 @@ class App extends Component {
       <div className="App">
         <Editor
           update={this.handleChange}></Editor>
-        <Preview></Preview> */
+        <Preview
+          preview={this.state.preview}></Preview>
       </div>
     );
   }
