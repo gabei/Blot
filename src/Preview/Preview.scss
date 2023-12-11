@@ -2,4 +2,9 @@
     width: 40%;
     border: 1px black solid;
     padding: 2rem;
+    overflow-wrap: anywhere;
+
+    & * {
+        max-width: 100%;;
+    }
 }
