@@ -1,25 +1,14 @@
 .Editor {
     width: 40%;
-    border: 1px solid black;
-    min-height: 10rem;
     
-    & textarea {
+    textarea {
         width: 100%;
         box-sizing: border-box;
         border: none;
         resize: vertical;
         padding: 2rem;
-        min-height: inherit;
+        min-height: 10rem;
+        border: 1px solid black;
+        outline: none;
     }
-}
-
-textarea {
-    width: 40%;
-    box-sizing: border-box;
-    border: none;
-    resize: vertical;
-    padding: 2rem;
-    min-height: 10rem;
-    border: 1px solid black;
-    outline: none;
 }

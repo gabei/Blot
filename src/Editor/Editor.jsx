@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
 import './Editor.scss';
+import ToolBar from '../ToolBar/ToolBar';
 
 class Editor extends Component {
     constructor(props){
@@ -15,7 +16,11 @@ class Editor extends Component {
 
     render(){
         return (
-            <TextareaAutosize onChange={this.handleChange}></TextareaAutosize>
+            <div class="Editor">
+                <ToolBar header={'Editor'}></ToolBar>
+                <TextareaAutosize 
+                onChange={this.handleChange}></TextareaAutosize>
+            </div>
         )
     }
 }
