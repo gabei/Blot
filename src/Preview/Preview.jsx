@@ -2,6 +2,7 @@ import { Component } from 'react';
 import './Preview.scss';
 import DOMPurify from 'dompurify';
 import { marked } from 'marked';
+import ToolBar from '../ToolBar/ToolBar';
 
 marked.use({ 
     gfm: true,
@@ -20,9 +21,13 @@ class Preview extends Component {
 
     render(){
         return (
-        <div 
-            className="Preview markdown-body" 
-            dangerouslySetInnerHTML={this.purifyHTML()}></div>
+            <div className="Preview">
+                <ToolBar header="Preview"></ToolBar>
+                <div 
+                className="markdown-body" 
+                dangerouslySetInnerHTML={this.purifyHTML()}></div>
+            </div>
+        
         )
     }
 }

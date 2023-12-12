@@ -2,8 +2,6 @@
 
 .Preview {
     width: 40%;
-    border: 1px black solid;
-    padding: 2rem;
     overflow-wrap: break-word;
     word-wrap: break-word;
 
@@ -13,5 +11,11 @@
 
     & code {
         white-space: normal;
+    }
+
+    .markdown-body {
+        padding: 2rem;
+        border: 1px solid black;
+        min-height: 10rem;
     }
 }
