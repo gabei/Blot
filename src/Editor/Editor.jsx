@@ -13,14 +13,7 @@ class Editor extends Component {
         this.props.update(e.target.value);
     }
 
-    updateHeight(){
-
-    }
-
     render(){
-
-
-
         return (
         <div className="Editor">
             <TextareaAutosize 
