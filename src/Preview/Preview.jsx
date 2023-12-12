@@ -27,8 +27,9 @@ class Preview extends Component {
             <div className="Preview">
                 <ToolBar header="Preview"></ToolBar>
                 <ReactToPrint 
+                    className="print-button"
                     content={ () => this.toPrint}
-                    trigger={ () => {return <a href="#">Print</a>}}></ReactToPrint>
+                    trigger={ () => {return <button>Print</button>}}></ReactToPrint>
                 <MarkDown
                     ref={el => (this.toPrint = el)}
                     className="markdown-body" 
