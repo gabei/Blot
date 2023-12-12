@@ -12,3 +12,14 @@
         min-height: inherit;
     }
 }
+
+textarea {
+    width: 40%;
+    box-sizing: border-box;
+    border: none;
+    resize: vertical;
+    padding: 2rem;
+    min-height: 10rem;
+    border: 1px solid black;
+    outline: none;
+}

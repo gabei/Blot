@@ -15,10 +15,7 @@ class Editor extends Component {
 
     render(){
         return (
-        <div className="Editor">
-            <TextareaAutosize 
-                onChange={this.handleChange}></TextareaAutosize>
-        </div>
+            <TextareaAutosize onChange={this.handleChange}></TextareaAutosize>
         )
     }
 }
