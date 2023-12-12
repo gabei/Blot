@@ -21,7 +21,7 @@ class Preview extends Component {
     render(){
         return (
         <div 
-            className="Preview" 
+            className="Preview markdown-body" 
             dangerouslySetInnerHTML={this.purifyHTML()}></div>
         )
     }
