@@ -1,8 +1,10 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import './Preview.scss';
 import DOMPurify from 'dompurify';
 import { marked } from 'marked';
 import ToolBar from '../ToolBar/ToolBar';
+import ReactToPrint from 'react-to-print';
+import {MarkDown} from './MarkDown';
 
 marked.use({ 
     gfm: true,
@@ -12,6 +14,7 @@ marked.use({
 class Preview extends Component {
     constructor(props){
         super(props);
+        //this.toPrint = React.createRef();
         this.purifyHTML = this.purifyHTML.bind(this);
     }
 
@@ -23,9 +26,13 @@ class Preview extends Component {
         return (
             <div className="Preview">
                 <ToolBar header="Preview"></ToolBar>
-                <div 
-                className="markdown-body" 
-                dangerouslySetInnerHTML={this.purifyHTML()}></div>
+                <ReactToPrint 
+                    content={ () => this.toPrint}
+                    trigger={ () => {return <a href="#">Print</a>}}></ReactToPrint>
+                <MarkDown
+                    ref={el => (this.toPrint = el)}
+                    className="markdown-body" 
+                    html={this.purifyHTML()}></MarkDown>
             </div>
         
         )
