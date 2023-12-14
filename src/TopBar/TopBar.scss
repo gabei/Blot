@@ -16,6 +16,62 @@
         height: 2.5rem;
         display: block;
         margin-right: 1rem;
+
+        @mixin inkblotmix {
+            background-color: black;
+            border-radius: 50%;
+            width: 2.4rem;
+            height: 2.4rem;
+            display: block;
+            position: absolute;
+            animation-name: warp;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+        }
+
+        @mixin circlemix {
+            background-color: black;
+            border-radius: 50%;
+            width: 2.4rem;
+            height: 2.4rem;
+            display: block;
+            position: absolute;
+            animation-name: circle;
+            animation-iteration-count: infinite;
+            animation-direction: linear;
+        }
+
+        @mixin squishmix {
+            background-color: black;
+            border-radius: 50%;
+            width: 2.4rem;
+            height: 2.4rem;
+            display: block;
+            position: absolute;
+            animation-name: squish;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+        }
+
+        &--shaper-1 {
+            @include inkblotmix;
+            animation-duration: 10s;
+        }
+        &--shaper-2{
+            @include inkblotmix;
+            animation-duration: 15s;
+        }
+        &--shaper-3{
+            @include inkblotmix;
+            animation-duration: 7s;
+        }
+        
+        &--shaper-4{
+            @include squishmix;
+            animation-duration: 5s;
+        }
     }
 
     .header-box {
@@ -33,3 +89,54 @@
         }
     }
 }
+
+
+  @keyframes warp {
+    0% {
+        border-radius: 50%;
+        transform: rotate(0deg);
+        height: 70%;
+    }
+
+    50% {
+        border-radius: 30%;
+        transform: rotate(180deg);
+    }
+
+    100% {
+        border-radius: 40%;
+        transform: rotate(360deg);
+    }
+  }
+
+  @keyframes squish {
+    0% {
+        transform: rotate(0deg) scaleX(1) scaleY(1);
+    }
+
+    25% {
+        transform: rotate(90deg) scaleX(.75) scaleY(1.3);
+    }
+
+    50% {
+        transform: rotate(180deg) scaleX(1) scaleY(1) translateX(3px);
+    }
+
+    75% {
+        transform: rotate(270deg)scaleX(.75) scaleY(1.3) translateX(-3px);
+    }
+
+    100% {
+        transform: rotate(360deg) scaleX(1) scaleY(1) translateX(0px);
+    }
+  }
+
+  @keyframes appear {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+  }
