@@ -14,6 +14,7 @@ class App extends Component {
     }
 
     this.handleChange = this.handleChange.bind(this);
+    this.handleClear = this.handleClear.bind(this);
   }
 
   handleChange(text){
@@ -23,11 +24,21 @@ class App extends Component {
     })
   }
 
+  handleClear(){
+    console.log("cleared");
+    this.setState({
+      editorText: '',
+      preview: ''
+    })
+  }
+
   render(){
     return (
       <div className="App">
         <Editor
-          update={this.handleChange}></Editor>
+          update={this.handleChange}
+          clear={this.handleClear}
+          currentText={this.state.editorText}></Editor>
         <Preview
           preview={this.state.preview}></Preview>
       </div>

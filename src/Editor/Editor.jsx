@@ -6,8 +6,8 @@ import ToolBar from '../ToolBar/ToolBar';
 class Editor extends Component {
     constructor(props){
         super(props);
-        
         this.handleChange = this.handleChange.bind(this);
+        //this.handleClear = this.handleClear.bind(this);
     }
 
     handleChange(e){
@@ -15,11 +15,18 @@ class Editor extends Component {
     }
 
     render(){
+        const clearButton = (
+            <button onClick={this.props.clear}>Clear</button>
+        )
+
+        console.log(`Editor has access to ${this.props.currentText}`)
+
         return (
             <div class="Editor">
-                <ToolBar header={'Editor'}></ToolBar>
+                <ToolBar header={'Editor'} children={clearButton}></ToolBar>
                 <TextareaAutosize 
-                onChange={this.handleChange}></TextareaAutosize>
+                    onChange={this.handleChange}
+                    value={this.props.currentText}></TextareaAutosize>
             </div>
         )
     }

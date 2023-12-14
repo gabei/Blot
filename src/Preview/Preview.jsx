@@ -30,10 +30,12 @@ class Preview extends Component {
                     }}>
             </ReactToPrint>
         )
-        
+
         return (
             <div className="Preview">
-                <ToolBar header="Preview" children={printButton}></ToolBar>
+                <ToolBar
+                    header="Preview" 
+                    children={printButton}></ToolBar>
                 <MarkDown
                     ref={el => (this.toPrint = el)}
                     className="markdown-body" 
