@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import './App.scss';
+import TopBar from './TopBar/TopBar';
 import Editor from './Editor/Editor';
 import Preview from './Preview/Preview';
 import { marked } from 'marked';
@@ -35,6 +36,7 @@ class App extends Component {
   render(){
     return (
       <div className="App">
+        <TopBar></TopBar>
         <Editor
           update={this.handleChange}
           clear={this.handleClear}
