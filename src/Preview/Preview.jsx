@@ -22,9 +22,14 @@ class Preview extends Component {
     }
 
     render(){
+        const pageStyle = {
+            padding: '1.5rem',
+        }
+
         const printButton = (
             <ReactToPrint 
                 content={ () => this.toPrint}
+                pageStyle={pageStyle}
                 trigger={ () => {
                     return <button className="print-button">Print</button>
                     }}>
