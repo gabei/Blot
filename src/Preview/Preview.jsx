@@ -14,7 +14,6 @@ marked.use({
 class Preview extends Component {
     constructor(props){
         super(props);
-        //this.toPrint = React.createRef();
         this.purifyHTML = this.purifyHTML.bind(this);
     }
 
@@ -27,9 +26,8 @@ class Preview extends Component {
             <div className="Preview">
                 <ToolBar header="Preview"></ToolBar>
                 <ReactToPrint 
-                    className="print-button"
                     content={ () => this.toPrint}
-                    trigger={ () => {return <button>Print</button>}}></ReactToPrint>
+                    trigger={ () => {return <button className="print-button">Print</button>}}></ReactToPrint>
                 <MarkDown
                     ref={el => (this.toPrint = el)}
                     className="markdown-body" 
