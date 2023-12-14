@@ -4,8 +4,14 @@
     background-color: #eeeeee;
     border: 1px solid black;
     border-bottom: none;
+    display: flex;
+    justify-content: space-between;
 
     h4{
         margin: 0px;
+    }
+
+    button {
+        cursor: pointer;
     }
 }

@@ -5,20 +5,12 @@
     overflow-wrap: break-word;
     word-wrap: break-word;
     position: relative;
-
     & * {
         max-width: 100%;;
     }
 
     & code {
         white-space: normal;
-    }
-
-    .print-button {
-        position: absolute;
-        top: .6rem;
-        right: 1rem;
-        cursor: pointer;
     }
 
     .markdown-body {

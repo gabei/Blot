@@ -22,12 +22,18 @@ class Preview extends Component {
     }
 
     render(){
+        const printButton = (
+            <ReactToPrint 
+                content={ () => this.toPrint}
+                trigger={ () => {
+                    return <button className="print-button">Print</button>
+                    }}>
+            </ReactToPrint>
+        )
+        
         return (
             <div className="Preview">
-                <ToolBar header="Preview"></ToolBar>
-                <ReactToPrint 
-                    content={ () => this.toPrint}
-                    trigger={ () => {return <button className="print-button">Print</button>}}></ReactToPrint>
+                <ToolBar header="Preview" children={printButton}></ToolBar>
                 <MarkDown
                     ref={el => (this.toPrint = el)}
                     className="markdown-body" 
