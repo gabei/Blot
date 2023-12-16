@@ -68,6 +68,7 @@
         &--shaper-3{
             @include inkblotmix;
             animation-duration: 7s;
+            animation-direction: alternate-reverse;
         }
         
         &--shaper-4{

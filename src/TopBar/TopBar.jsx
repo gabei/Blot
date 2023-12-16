@@ -11,7 +11,7 @@ export default function TopBar(props){
                 <div className="logo--shaper-4"></div>
             </div>
             <div className="header-box">
-                <h1>Blotter</h1>
+                <h1>Blot</h1>
                 <h2>Markdown Previewer</h2>
             </div>
         </div>

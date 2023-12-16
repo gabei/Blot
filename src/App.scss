@@ -13,4 +13,8 @@ html {
   flex-wrap: nowrap;
   justify-content: space-evenly;
   top: 5rem;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+}
 }
