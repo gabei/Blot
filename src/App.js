@@ -26,7 +26,6 @@ class App extends Component {
   }
 
   handleClear(){
-    console.log("cleared");
     this.setState({
       editorText: '',
       preview: ''
