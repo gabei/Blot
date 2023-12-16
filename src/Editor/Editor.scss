@@ -1,9 +1,5 @@
 .Editor {
     width: 40%;
-
-    &:focus-within {
-        box-shadow: 1px 1px 5px rgba(0,0,0,0.25);
-    }
     
     textarea {
         width: 100%;
@@ -14,5 +10,9 @@
         border: 1px solid black;
         outline: none;
         font-size: inherit;
+
+        &:focus {
+            box-shadow: 1px 1px 5px rgba(0,0,0,0.25);
+        }
     }
 }
