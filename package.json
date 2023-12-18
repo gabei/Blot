@@ -1,5 +1,5 @@
 {
-  "name": "blotter",
+  "name": "blot",
   "version": "0.1.0",
   "homepage": "https://gabei.github.io/blot",
   "private": false,
@@ -11,6 +11,7 @@
     "marked": "^11.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.0",
     "react-scripts": "5.0.1",
     "react-textarea-autosize": "^8.5.3",
     "react-to-print": "^2.14.15",
